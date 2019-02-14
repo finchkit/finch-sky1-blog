@@ -4,6 +4,18 @@
 </head>
 
 <body>
+
 <h1>It Works!</h1>
+
+{% for post in posts %}
+
+    <div>
+        <h1><a href="">{{ post.title }}</a> </h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <P>Published Date: {{ post.published_date }}</P>
+    </div>
+
+{% endfor %}
+
 </body>
 </html>
