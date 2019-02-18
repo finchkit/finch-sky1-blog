@@ -1,13 +1,7 @@
-<html>
-<head>
-    <title>Finchkit Blog</title>
-</head>
+{% extends 'blog/base.html' %}
 
-<body>
-
-<h1>It Works!</h1>
-
-{% for post in posts %}
+{% block content %}
+  {% for post in posts %}
 
     <div>
         <h1><a href="">{{ post.title }}</a> </h1>
@@ -15,7 +9,5 @@
         <P>Published Date: {{ post.published_date }}</P>
     </div>
 
-{% endfor %}
-
-</body>
-</html>
+  {% endfor %}
+{% endblock %}
